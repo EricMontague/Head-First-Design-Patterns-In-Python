@@ -7,7 +7,7 @@ class TVOnCommand(ICommand):
 
     def execute(self):
         self._tv.on()
-        self._tv.set_input_channel()
+        self._tv.set_channel(45)
 
     def undo(self):
         self._tv.off()

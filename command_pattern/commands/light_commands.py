@@ -8,6 +8,9 @@ class LightOnCommand(ICommand):
     def execute(self):
         self._light.on()
 
+    def undo(self):
+        self._light.off()
+
 
 class LightOffCommand(ICommand):
     def __init__(self, light):
@@ -16,3 +19,5 @@ class LightOffCommand(ICommand):
     def execute(self):
         self._light.off()
 
+    def undo(self):
+        self._light.on()

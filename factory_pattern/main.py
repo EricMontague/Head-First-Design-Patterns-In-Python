@@ -1,9 +1,9 @@
 import sys
 import os
 
-DIRNAME = os.path.abspath(os.path.dirname(__file__))
-if DIRNAME not in sys.path:
-    sys.path.insert(0, DIRNAME)
+current_directory = os.path.abspath(os.path.dirname(__file__))
+if current_directory not in sys.path:
+    sys.path.insert(0, current_directory)
 from abstract_factory.pizza_stores import NYPizzaStore, ChicagoPizzaStore
 
 

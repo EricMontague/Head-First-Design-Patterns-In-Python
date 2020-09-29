@@ -8,6 +8,9 @@ class LivingRoomLightOnCommand(ICommand):
     def execute(self):
         self._light.on()
 
+    def undo(self):
+        self._light.off()
+
 
 class LivingRoomLightOffCommand(ICommand):
     def __init__(self, light):
@@ -15,3 +18,7 @@ class LivingRoomLightOffCommand(ICommand):
 
     def execute(self):
         self._light.off()
+
+    def undo(self):
+        self._light.on()
+

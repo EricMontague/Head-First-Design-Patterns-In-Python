@@ -7,3 +7,10 @@ class NoCommand(ICommand):
 
     def execute(self):
         pass
+
+    def undo(self):
+        pass
+
+
+def no_command(*args, **kwargs):
+    pass

@@ -10,6 +10,11 @@ class HottubOnCommand(ICommand):
         self._hottub.on()
         self._hottub.bubbles_on()
 
+    def undo(self):
+        self._hottub.cool()
+        self._hottub.off()
+        self._hottub.bubbles_off()
+
 
 class HottubOffCommand(ICommand):
     def __init__(self, hottub):
@@ -20,3 +25,7 @@ class HottubOffCommand(ICommand):
         self._hottub.off()
         self._hottub.bubbles_off()
 
+    def undo(self):
+        self._hottub.heat()
+        self._hottub.on()
+        self._hottub.bubbles_on()
